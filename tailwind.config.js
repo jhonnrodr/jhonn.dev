@@ -1,11 +1,17 @@
 module.exports = {
+  darkMode: 'class',
   purge: [
     'source/**/*.blade.php',
     'source/**/*.md',
     'source/**/*.html',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ['Inter', 'sans-serif'],
+    },
+    extend: {
+      
+    },
   },
   variants: {
     extend: {},
