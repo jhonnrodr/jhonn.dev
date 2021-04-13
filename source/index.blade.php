@@ -1,56 +1,9 @@
 @extends('_layouts.main')
 
 @section('body')
-<header class="top-0 left-0 z-40  w-full ">
-<nav class="container mx-auto flex flex-col sm:flex-row justify-between items-center py-8">
-    <div class="mb-4 sm:mb-0">
-        <a href="/" aria-current="page" class="inline-flex">
-            <svg class="feather feather-code h-10 w-10 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24">
-                <defs/>
-                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-            </svg>
-            
-        </a>
-    </div>
-    <ul class="uppercase tracking-wide font-bold flex items-center space-x-8 dark:text-white">
-        <li>
-            <a href="#" id="mode" class="hover:bg-gray-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </a>
-        </li>
-        <li>
-            <a href="/#projects" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
-            Home
-            </a>
-        </li>
-        <li>
-            <a href="/#projects" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
-            Blog
-            </a>
-        </li>
-        <li>
-            <a href="/#projects" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
-            Work
-            </a>
-        </li>
-        <li>
-            <a href="/#projects" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
-            About
-            </a>
-        </li>
-        <li>
-            <a href="/#projects" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
-            Contact
-            </a>
-        </li>
-    </ul>
-</nav>
-</header>
 
 <div class="md:py-16  py-8 px-6 flex-auto mx-auto w-full max-w-4xl container text-center dark:text-white">
-    <h1 class="text-4xl md:text-6xl  font-bold  mb-4">Full-stack Developer</h1>
+    <h1 class="text-3xl md:text-6xl  font-bold  mb-4">Full-stack Developer</h1>
     <h1 class="text-xl md:text-2xl mb-6">Hi there 👋, I'm Jhonn a full-stack developer based in Santo Domingo, 🇩🇴 DR. 
         I working primarily with Laravel and Vue.js</h1>
     <div>

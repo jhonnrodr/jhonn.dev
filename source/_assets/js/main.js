@@ -4,13 +4,3 @@ if (localStorage.theme === 'dark' || (!'theme' in localStorage && window.matchMe
     document.querySelector('html').classList.add('dark');
 }
 
-document.getElementById('mode').addEventListener('click', function() {
-    let htmlClasses = document.querySelector('html').classList;
-    if(localStorage.theme == 'dark') {
-        htmlClasses.remove('dark');
-        localStorage.removeItem('theme');
-    } else {
-        htmlClasses.add('dark');
-        localStorage.theme = 'dark';
-    }
-});
