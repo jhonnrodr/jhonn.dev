@@ -77,16 +77,16 @@
                     </svg>
                 </button>
             </div>
-            <button x-show="mobileNav === false" @click="mobileNav = true" class="flex justify-center items-center  dark:text-white h-10 lg:hidden focus:outline-none">
+            <button x-show="mobileMenu === false" @click="mobileMenu = true" class="flex justify-center items-center  dark:text-white h-10 lg:hidden focus:outline-none">
                 <svg class="h-10 w-7 dark:text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" ><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
-            <button x-show="mobileNav === true" @click="mobileNav = false" class="flex justify-center items-center  dark:text-white h-10 lg:hidden focus:outline-none">
+            <button x-show="mobileMenu === true" @click="mobileMenu = false" class="flex justify-center items-center  dark:text-white h-10 lg:hidden focus:outline-none">
                 <svg class="h-10 w-7 dark:text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" ><path d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
         
     </nav>
-    <nav id="mobile-nav" class="lg:hidden" x-show="mobileNav">
+    <nav class="lg:hidden" x-show="mobileMenu">
         <div class="max-w-4xl mx-auto">
             <ul class="my-0 pt-4 list-none border-t-2 dark:border-t border-b-2 dark:border-b border-gray-200 dark:border-gray-500 mx-6">
                 <li>
@@ -122,7 +122,7 @@
     <script>
         function data() {
             return {
-                mobileNav: false,
+                mobileMenu: false,
                 theme: localStorage.theme == 'dark' ?? false,
                 toggle() { 
                     let htmlClasses = document.querySelector('html').classList;
