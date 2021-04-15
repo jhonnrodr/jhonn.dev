@@ -3,7 +3,8 @@
 @section('body')
 
 <div class="md:py-16  py-8 px-6 flex-auto mx-auto w-full max-w-4xl container text-center dark:text-white">
-    <h1 class="text-3xl md:text-6xl  font-bold  mb-4">Full-stack Developer</h1>
+    <h1 class="text-3xl md:text-6xl  font-bold  ">Jhonn Rodriguez</h1>
+    <h1 class="text-3xl md:text-6xl  font-bold mb-4 line-1 anim-typewriter">Full-stack Developer</h1>
     <h1 class="text-xl md:text-2xl mb-6">Hi there 👋, I'm Jhonn a full-stack developer based in Santo Domingo, 🇩🇴 DR. 
         I working primarily with Laravel and Vue.js</h1>
     <div>
