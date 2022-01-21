@@ -11,8 +11,9 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
     </head>
-    <body class="text-gray-800 font-sans antialiased bg-white dark:bg-gray-800">
-        @include('_layouts.header')
+    <body class="text-gray-800 font-sans antialiased bg-gray-50 dark:bg-gray-800">
+        @include('_layouts._partials.header')
         @yield('body')
+        @yield('_layouts._partials.footer')
     </body>
 </html>

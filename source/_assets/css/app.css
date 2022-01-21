@@ -1,26 +1,15 @@
-/* .line-1{
-    position: relative;
-    top: 50%;  
-
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-
-} */
-
-/* Animation */
-/* .anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+[x-cloak] {
+  display: none !important;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 100%;}
+
+.ml-auto {
+  margin-left: auto;
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-} */
+.mr-auto {
+  margin-right: auto;
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249,250,251,var(--tw-bg-opacity));
+}
