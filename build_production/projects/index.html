@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="/projects">
+        <meta name="description" content="Im Full Stack Developer in Laravel and Vue.">
+        <title>Jhonn Rodriguez</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=092276236fad2a9a5faa">
+        <script defer src="/assets/build/js/main.js?id=60dfd3a6d23083966d91"></script>
+    </head>
+    <body class="text-gray-800 font-sans antialiased bg-gray-50 dark:bg-gray-800">
+        <header class="top-0 left-0 z-40  w-full bg-white dark:bg-gray-900" x-data="data()" x-cloak>
+    <nav class="container mx-auto flex sm:flex-row justify-between items-center py-8 px-6">
+        <div class="hidden md:flex mb-4 sm:mb-0">
+            <a href="/" aria-current="page" class="inline-flex">
+                <svg class="feather feather-code h-10 w-10 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24">
+                    <defs/>
+                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                </svg> 
+            </a>
+        </div>
+        <ul class="hidden md:flex  tracking-wide   items-center space-x-8 dark:text-white">
+            <li>
+                <a href="javascript:void(0);" x-show="theme === false" @click="toggle()"  class=" hover:bg-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </a>
+                <a href="javascript:void(0);" x-show="theme === true" @click="toggle()"  class=" hover:bg-gray-500">
+                    <svg class="feather feather-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                        <circle cx="12" cy="12" r="5">
+                        </circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                </a>
+            </li>
+                        <li>
+                <a href="/" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
+                Home
+                </a>
+            </li>
+                        <li>
+                <a href="/blog" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
+                Blog
+                </a>
+            </li>
+                        <li>
+                <a href="/projects" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
+                Work
+                </a>
+            </li>
+                        <li>
+                <a href="/about" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
+                About
+                </a>
+            </li>
+                        <li>
+                <a href="/contact" data-cypress="projects" class="text-copy-primary hover:text-gray-600">
+                Contact
+                </a>
+            </li>
+                    </ul>
+
+        
+            <div class="flex items-center lg:hidden">
+            <a href="/" title="Jhonn Rodriguez" class="text-grey-900 dark:text-white no-underline flex items-center">
+                <svg class="feather feather-code h-10 w-7 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24">
+                    <defs/>
+                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                </svg>
+            </a>
+        </div>
+        <div class="flex justify-start items-center lg:hidden">
+            <div class="flex flex-1 justify-end items-center text-right px-4 lg:px-0">
+                <button x-show="theme === false" @click="toggle()" class="flex lg:hidden justify-center items-center  dark:text-white focus:outline-none h-10 pl-5 pr-3">
+                    <svg class="feather feather-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button> 
+                <button x-show="theme === true" @click="toggle()" class="flex lg:hidden justify-center items-center  dark:text-white focus:outline-none h-10 pl-5 pr-3">
+                    <svg class="feather feather-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                        <circle cx="12" cy="12" r="5">
+                        </circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                </button>
+            </div>
+            <button x-show="mobileMenu === false" @click="mobileMenu = true" class="flex justify-center items-center  dark:text-white h-10 lg:hidden focus:outline-none">
+                <svg class="h-10 w-7 dark:text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" ><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+            <button x-show="mobileMenu === true" @click="mobileMenu = false" class="flex justify-center items-center  dark:text-white h-10 lg:hidden focus:outline-none">
+                <svg class="h-10 w-7 dark:text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" ><path d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        
+    </nav>
+    <nav class="lg:hidden" x-show="mobileMenu">
+        <div class="max-w-4xl mx-auto">
+            <ul class="my-0 pt-4 list-none border-t-2 dark:border-t border-b-2 dark:border-b border-gray-200 dark:border-gray-500 mx-6">
+                <li>
+                    <a href="#" class="mb-4 block font-bold text-gray-900 dark:text-white">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="mb-4 block font-normal   text-gray-900 dark:text-white">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="mb-4 block font-normal   text-gray-900 dark:text-white">
+                        Work
+                    </a>
+                </li>
+                <li>
+                    <a href="/about" class="mb-4 block font-normal   text-gray-900 dark:text-white">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="mb-4 block font-normal   text-gray-900 dark:text-white">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <script>
+        function data() {
+            return {
+                mobileMenu: false,
+                theme: localStorage.theme == 'dark' ?? false,
+                toggle() { 
+                    let htmlClasses = document.querySelector('html').classList;
+                    if(localStorage.theme == 'dark') {
+                        htmlClasses.remove('dark');
+                        localStorage.removeItem('theme');
+                        this.theme = false;
+                    } else {
+                        htmlClasses.add('dark');
+                        localStorage.theme = 'dark';
+                        this.theme = true;
+                    }
+                }
+            }
+    }
+    </script>        <section class="px-3 lg:px-0 ">
+  <div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
+    <div class="text-center">
+      <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+        <span class="block">Recent Works</span>
+      </h1>
+      <p class="mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-white sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+        My recent projects with I worked in last 5 years.
+        </p>
+    </div>
+</div>
+
+<div class="relative pt-16 pb-32 lg:overflow-hidden">
+          <div class="relative">
+    
+    
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+        <div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              HelloCocinero
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-white">
+              HelloCocinero is an online e-commerce booking platform for booking Music/Concert Shows from United Kingdom. 
+            I worked on the frontend as a Vue.js Developer. The entire application was build using Nuxt.js with API integration using the Laravel Framework.
+            </p>
+            <div class="mt-6">
+              <a target="_blank" rel="nofollow" class="text-base font-medium dark:text-white" href="https://clickandcollection.com/?utm_source=jumpstartpro">
+                See Website →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-6">
+          
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" 
+          src="/assets/images/portfolio/01.png">
+        </div>
+      </div>
+    </div>
+      </div>
+          <div class="mt-24">
+    
+        <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+        <div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              PetWild
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-white">
+              PetWild is an online e-commerce booking platform for booking Music/Concert Shows from United Kingdom. 
+            I worked on the frontend as a Vue.js Developer. The entire application was build using Nuxt.js with API integration using the Laravel Framework.
+            </p>
+            <div class="mt-6">
+              <a target="_blank" rel="nofollow" class="text-base font-medium dark:text-white" 
+              href="https://clickandcollection.com/?utm_source=jumpstartpro">
+                See Website →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-6">
+          
+        </div>
+        
+        
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" 
+          src="/assets/images/portfolio/02.png">
+        </div>
+      </div>
+    </div>
+      </div>
+          <div class="mt-24">
+    
+    
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+        <div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              POS
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-white">
+              POS is an online e-commerce booking platform for booking Music/Concert Shows from United Kingdom. 
+            I worked on the frontend as a Vue.js Developer. The entire application was build using Nuxt.js with API integration using the Laravel Framework.
+            </p>
+            <div class="mt-6">
+              <a target="_blank" rel="nofollow" class="text-base font-medium dark:text-white" href="https://clickandcollection.com/?utm_source=jumpstartpro">
+                See Website →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-6">
+          
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" 
+          src="/assets/images/portfolio/07.png">
+        </div>
+      </div>
+    </div>
+      </div>
+          <div class="mt-24">
+    
+        <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+        <div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              Cripto.com.do
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-white">
+              Cripto.com.do is an online e-commerce booking platform for booking Music/Concert Shows from United Kingdom. 
+            I worked on the frontend as a Vue.js Developer. The entire application was build using Nuxt.js with API integration using the Laravel Framework.
+            </p>
+            <div class="mt-6">
+              <a target="_blank" rel="nofollow" class="text-base font-medium dark:text-white" 
+              href="https://clickandcollection.com/?utm_source=jumpstartpro">
+                See Website →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-6">
+          
+        </div>
+        
+        
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" 
+          src="/assets/images/portfolio/06.png">
+        </div>
+      </div>
+    </div>
+      </div>
+          <div class="mt-24">
+    
+    
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+        <div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              Tesytar
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-white">
+              Tesytar is an online job-board platform for booking Music/Concert Shows from United Kingdom. 
+            I worked on the frontend as a Vue.js Developer. The entire application was build using Nuxt.js with API integration using the Laravel Framework.
+            </p>
+            <div class="mt-6">
+              <a target="_blank" rel="nofollow" class="text-base font-medium dark:text-white" href="https://clickandcollection.com/?utm_source=jumpstartpro">
+                See Website →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-6">
+          
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" 
+          src="/assets/images/portfolio/05.png">
+        </div>
+      </div>
+    </div>
+      </div>
+          <div class="mt-24">
+    
+        <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+        <div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              GeekJapan
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-white">
+              GeekJapan is an online subscription box platform for booking Music/Concert Shows from United Kingdom. 
+            I worked on the frontend as a Vue.js Developer. The entire application was build using Nuxt.js with API integration using the Laravel Framework.
+            </p>
+            <div class="mt-6">
+              <a target="_blank" rel="nofollow" class="text-base font-medium dark:text-white" 
+              href="https://clickandcollection.com/?utm_source=jumpstartpro">
+                See Website →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-6">
+          
+        </div>
+        
+        
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" 
+          src="/assets/images/portfolio/03.jpg">
+        </div>
+      </div>
+    </div>
+      </div>
+          <div class="mt-24">
+    
+    
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+        <div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              CrateJobs
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-white">
+              CrateJobs is an online job-board platform for booking Music/Concert Shows from United Kingdom. 
+            I worked on the frontend as a Vue.js Developer. The entire application was build using Nuxt.js with API integration using the Laravel Framework.
+            </p>
+            <div class="mt-6">
+              <a target="_blank" rel="nofollow" class="text-base font-medium dark:text-white" href="https://clickandcollection.com/?utm_source=jumpstartpro">
+                See Website →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-6">
+          
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" 
+          src="/assets/images/portfolio/04.png">
+        </div>
+      </div>
+    </div>
+      </div>
+   
+</div>
+  
+    
+      
+       
+</section>
+            </body>
+</html>
